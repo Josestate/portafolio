@@ -224,3 +224,24 @@ tr th{
 .checkStatus{
     background-color: rgb(144, 246, 185);
 }
+@media screen and (max-width: 1024px){
+    .container{
+        display: block;
+        overflow: hidden;
+        PADDING: 0 10px;
+        font-size: 30px;
+    }
+    .btnContainer{
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+    .containerTD{
+        margin-top: 100px;
+        width: 100%;
+    }
+    .calculator{
+        width: 100%;
+    }
+    .btn{
+        width: 100%;
+    }   
+}
