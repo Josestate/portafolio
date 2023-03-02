@@ -1,6 +1,8 @@
 .container{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
 }
 .containerTD{
     width: 350px;
@@ -119,7 +121,7 @@ tr th{
     width: 50%;
 }
 .hide{
-    display: none;
+    display: none !important;
 }
 .inputContainer{
     position: relative;
@@ -223,6 +225,47 @@ tr th{
 }
 .checkStatus{
     background-color: rgb(144, 246, 185);
+}
+.navContainer{
+    display: inline-block;
+    padding-right: 30px;
+    font-size: 20px;
+    height: 110px;
+    width: 30%;
+}
+.introduction{
+    display: inline-block;
+    margin-right: 50px;
+    width: 45%;
+}
+.childContainer{
+    margin: 10% 0;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+
+}
+.appContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body{
+    height: 100%;
+    margin: 0;
+}
+html{
+    height: 100%;
+}
+.navContainer ul{
+    width: 150px;
+    background: aquamarine;
+    padding: 20px;
+}
+li{
+    list-style: none;
 }
 @media screen and (max-width: 1024px){
     .container{
