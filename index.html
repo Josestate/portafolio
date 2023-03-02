@@ -8,68 +8,83 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
-        <div class="calculator">
-            <h1 class="htsk">Calculator</h1>
-            <table class="fatherResults hide">
-                <thead>
-                    <tr class="TheadChild">
-                        <th>Operation</th>
-                        <th class="resultTH">Result</th>
-                    </tr>
-                </thead>
-                <tbody class="oldResults"></tbody>
-            </table>
-            <button class="clear hide" onclick="clearAll()">Clear History</button>
-            <div class="inputContainer">
-                <input type="text" class="typerInp" name="numberTyper">
-                <img src="img/warning-icon-transparent-free-png.webp" alt="img" class="warningImg hide">
-                <p class="result"></p>
-            </div>
-            <div class="btnContainer">
-                <button class="btn numberBtn" value="7" onclick="numeros(this)">7</button>
-                <button class="btn numberBtn" value="8" onclick="numeros(this)">8</button>
-                <button class="btn numberBtn" value="9" onclick="numeros(this)">9</button>
-                <button class="btn funcBtn divBtn" value="/" onclick="numbersF(this)">÷</button>
+    <div class="appContainer">
+        <div class="container">
+            <div class="childContainer">
+                <div class="introduction apps ">
+                    <h1>Welcome</h1>
+                    <p>My name is Jose Pablo, im from San Jose Costa Rica, im student of front-end programing</p>
+                </div>
+                <div class="calculator apps hide">
+                    <h1 class="htsk">Calculator</h1>
+                    <table class="fatherResults hide">
+                        <thead>
+                            <tr class="TheadChild">
+                                <th>Operation</th>
+                                <th class="resultTH">Result</th>
+                            </tr>
+                        </thead>
+                        <tbody class="oldResults"></tbody>
+                    </table>
+                    <button class="clear hide" onclick="clearAll()">Clear History</button>
+                    <div class="inputContainer">
+                        <input type="text" class="typerInp" name="numberTyper">
+                        <img src="img/warning-icon-transparent-free-png.webp" alt="img" class="warningImg hide">
+                        <p class="result"></p>
+                    </div>
+                    <div class="btnContainer">
+                        <button class="btn numberBtn" value="7" onclick="numeros(this)">7</button>
+                        <button class="btn numberBtn" value="8" onclick="numeros(this)">8</button>
+                        <button class="btn numberBtn" value="9" onclick="numeros(this)">9</button>
+                        <button class="btn funcBtn divBtn" value="/" onclick="numbersF(this)">÷</button>
 
-                <button class="btn numberBtn" value="4" onclick="numeros(this)">4</button>
-                <button class="btn numberBtn" value="5" onclick="numeros(this)">5</button>
-                <button class="btn numberBtn" value="6" onclick="numeros(this)">6</button>
-                <button class="btn funcBtn multBtn" value="*" onclick="numbersF(this)">X</button>
+                        <button class="btn numberBtn" value="4" onclick="numeros(this)">4</button>
+                        <button class="btn numberBtn" value="5" onclick="numeros(this)">5</button>
+                        <button class="btn numberBtn" value="6" onclick="numeros(this)">6</button>
+                        <button class="btn funcBtn multBtn" value="*" onclick="numbersF(this)">X</button>
 
-                <button class="btn numberBtn" value="1" onclick="numeros(this)">1</button>
-                <button class="btn numberBtn" value="2" onclick="numeros(this)">2</button>
-                <button class="btn numberBtn" value="3" onclick="numeros(this)">3</button>
-                <button class="btn funcBtn restBtn" value="-" onclick="numbersF(this)">-</button>
+                        <button class="btn numberBtn" value="1" onclick="numeros(this)">1</button>
+                        <button class="btn numberBtn" value="2" onclick="numeros(this)">2</button>
+                        <button class="btn numberBtn" value="3" onclick="numeros(this)">3</button>
+                        <button class="btn funcBtn restBtn" value="-" onclick="numbersF(this)">-</button>
 
-                <button class="btn numberBtn" value="0" onclick="numeros(this)">0</button>
-                <button class="btn numberBtn" value="." onclick="numeros(this)">.</button>
-                <button class="btn funcBtn deleteBtn" value="C" onclick="borrar()">C</button>
-                <button class="btn funcBtn sumaBtn" value="+" onclick="numbersF(this)">+</button>
+                        <button class="btn numberBtn" value="0" onclick="numeros(this)">0</button>
+                        <button class="btn numberBtn" value="." onclick="numeros(this)">.</button>
+                        <button class="btn funcBtn deleteBtn" value="C" onclick="borrar()">C</button>
+                        <button class="btn funcBtn sumaBtn" value="+" onclick="numbersF(this)">+</button>
+                    </div>
+                </div>
+                <div class="containerTD apps hide">
+                    <h1 class="htsk">ToDo List</h1>
+                    <div class="inpSearch hide">
+                        <input type="text" placeholder="Search your task" class="searchInp" onkeyup="inpSearchFn(this)">
+                        <button class="searchBtn" onclick="btnadder(this)"><img src="img/icone-loupe-noir.png" alt="" class="lupaImg"></button> 
+                    </div>   
+                    <div class="inpCont">
+                        <input type="text" placeholder="Write your task" class="inpTd">
+                        <button class="addBtnTD" onclick="btnadder(this)">+</button>
+                    </div>
+                    <div class="colorIndiator">
+                        <p class="whitep">Pending</p>
+                        <p class="aquap">In Progress</p>
+                        <p class="grayp">On hold</p>                
+                        <p class="greenp">Complete</p>
+                    </div>
+                    <div class="tasksContainer">
+                        <ul class="ulF"></ul>
+                    </div>
+                    <div class="empty">
+                        <p>We dont have any tasks for you</p>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="containerTD">
-            <h1 class="htsk">ToDo List</h1>
-            <div class="inpSearch hide">
-                <input type="text" placeholder="Search your task" class="searchInp" onkeyup="inpSearchFn(this)">
-                <button class="searchBtn" onclick="btnadder(this)"><img src="img/icone-loupe-noir.png" alt="" class="lupaImg"></button> 
-            </div>   
-            <div class="inpCont">
-                <input type="text" placeholder="Write your task" class="inpTd">
-                <button class="addBtnTD" onclick="btnadder(this)">+</button>
-            </div>
-            <div class="colorIndiator">
-                <p class="whitep">Pending</p>
-                <p class="aquap">In Progress</p>
-                <p class="grayp">On hold</p>                
-                <p class="greenp">Complete</p>
-            </div>
-            <div class="tasksContainer">
-                <ul class="ulF"></ul>
-            </div>
-            <div class="empty">
-                <p>We dont have any tasks for you</p>
-            </div>
+            <nav class="navContainer">   
+                <ul>
+                    <li>Introduction</li>
+                    <li onclick="openCalc(this)">Calculator</li>
+                    <li>ToDo List</li>
+                </ul>
+            </nav>
         </div>
     </div>
     <script src="main.js"></script>

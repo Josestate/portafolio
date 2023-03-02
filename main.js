@@ -212,3 +212,7 @@ function adderOfTasks(element){
     }
     })()}`);
 }
+function openCalc(e){
+    document.querySelector(".introduction").classList.add("hide");
+    document.querySelector(".calculator").classList.remove("hide");
+}
