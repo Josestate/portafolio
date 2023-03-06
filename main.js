@@ -104,6 +104,7 @@ window.addEventListener("load", e=>{
         document.querySelector(".empty").classList.add("hide");
         document.querySelector(".inpSearch").classList.remove("hide")
     }
+    e.parentElement.classList.add("negro");
 });
 document.querySelector(".containerTD").addEventListener("keydown", function(e){
     if(e.key == "Enter"){
@@ -121,6 +122,7 @@ function deleteBTn(e){
     localStorage.setItem("task", JSON.stringify(taskList));
 }
 function btnInProg(e){
+    e.parentElement.classList.add("negro");
     e.parentNode.children[1].classList.remove("hide");
     e.parentNode.children[4].classList.remove("hide");
     e.classList.add("hide");
@@ -173,7 +175,7 @@ function inpSearchFn(e){
 function adderOfTasks(element){
     document.querySelector(".ulF").insertAdjacentHTML("beforeend", 
     `${(() =>{if(element.status == "progress"){
-        return (`<li class="txts progresStatus">
+        return (`<li class="txts progresStatus negro">
         <span>${element.task}</span>  
         <button class="btnCheck" onclick="checkbtn(this)">✔</button>
         <button class="btnDelete hide" onclick="deleteBTn(this)">X</button>
@@ -182,7 +184,7 @@ function adderOfTasks(element){
         <hr>
     </li>`);
     }else if(element.status == "hold"){
-        return (`<li class="txts holdStatus">
+        return (`<li class="txts holdStatus negro">
         <span>${element.task}</span>  
         <button class="btnCheck hide" onclick="checkbtn(this)">✔</button>
         <button class="btnDelete" onclick="deleteBTn(this)">X</button>
@@ -191,7 +193,7 @@ function adderOfTasks(element){
         <hr>
     </li>`)
     }else if(element.status == "check"){
-        return (`<li class="txts checkStatus">
+        return (`<li class="txts checkStatus negro">
         <span>${element.task}</span>  
         <button class="btnCheck hide" onclick="checkbtn(this)">✔</button>
         <button class="btnDelete" onclick="deleteBTn(this)">X</button>
@@ -213,6 +215,20 @@ function adderOfTasks(element){
     })()}`);
 }
 function openCalc(e){
-    document.querySelector(".introduction").classList.add("hide");
-    document.querySelector(".calculator").classList.remove("hide");
+    $(".introduction").fadeOut(500, function (){
+        $(".containerTD").fadeOut(500);
+        $(".calculator").delay(500).fadeIn(500);
+    });
+}
+function openTD(e){
+    $(".introduction").fadeOut(500, function (){
+        $(".calculator").fadeOut(500);
+        $(".containerTD").delay(500).fadeIn(500);
+    });
+}
+function openIntro(e){
+    $(".calculator").fadeOut(500, function (){
+        $(".containerTD").fadeOut(500);
+        $(".introduction").delay(500).fadeIn(500);
+    });
 }

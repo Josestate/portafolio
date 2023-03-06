@@ -1,3 +1,6 @@
+.negro{
+    color: black;
+}
 .container{
     display: flex;
     justify-content: space-evenly;
@@ -5,8 +8,11 @@
     width: 100%;
 }
 .containerTD{
+    display: none;
     width: 350px;
     text-align: center;
+    background: #cd0101cc;
+    padding: 20px;
 }
 .inpCont{
     display: flex;
@@ -47,8 +53,8 @@
     color: rgb(251, 250, 250);
 }
 .htsk{
-    line-height: 0px;
     text-decoration: overline;
+    margin-block-end: 0;
 }
 hr{
     margin: 0;
@@ -59,6 +65,7 @@ hr{
     left: 0;
 }
 .txts{    
+    font-weight: bold;
     list-style: none;
     text-align: left;
     padding: 10px;
@@ -105,9 +112,12 @@ hr{
     padding-inline-start: 0;
 }
 .calculator{
+    background: #cd0101cc;
     position: relative;
+    display: none;
     width: 350px;
-    text-align: center;
+    text-align: center;  
+    padding: 20px; 
 }
 .clear{
     background-color: red;
@@ -122,6 +132,7 @@ tr th{
 }
 .hide{
     display: none !important;
+    transition: display 2s;
 }
 .inputContainer{
     position: relative;
@@ -136,7 +147,7 @@ tr th{
 .btnContainer{
     display: grid;
     grid-gap: 5px;
-    grid-template-columns: 83px 83px 83px 83px  
+    grid-template-columns: 25% 25% 25% 25%; 
 }
 .btn{
     cursor: pointer;
@@ -228,15 +239,26 @@ tr th{
 }
 .navContainer{
     display: inline-block;
-    padding-right: 30px;
-    font-size: 20px;
-    height: 110px;
     width: 30%;
+    color: white;
+}
+.txtsIntro{
+    position: relative;
+    z-index: 1;
 }
 .introduction{
+    position: relative;
     display: inline-block;
     margin-right: 50px;
     width: 45%;
+    color: white;
+}
+.introductionImg{
+    position: absolute;
+    top: -228px;
+    left: -85px;
+    width: 150%;
+    z-index: 1;
 }
 .childContainer{
     margin: 10% 0;
@@ -253,26 +275,38 @@ tr th{
     align-items: center;
 }
 body{
+    background: url("../img/Dribbble-hexgif-by-Tim-Hykes.gif");
+    background-size: 100%;
     height: 100%;
     margin: 0;
+    color: rgb(255, 254, 254);
 }
 html{
     height: 100%;
 }
 .navContainer ul{
-    width: 150px;
-    background: aquamarine;
-    padding: 20px;
+    width: 110px;
+    background: #cd0101cc;
+    padding: 33px;
+    box-shadow: 10px 10px 10px 9px black;
 }
 li{
-    list-style: none;
+    margin: 15px;
+    cursor: pointer;
 }
+li:hover{
+    font-size: 19px;
+}
+
 @media screen and (max-width: 1024px){
     .container{
         display: block;
         overflow: hidden;
         PADDING: 0 10px;
         font-size: 30px;
+    }
+    .appContainer{
+        height: auto;
     }
     .btnContainer{
         grid-template-columns: 25% 25% 25% 25%;
@@ -286,5 +320,34 @@ li{
     }
     .btn{
         width: 100%;
-    }   
+    }
+    .childContainer{
+        width: 100%;
+        display: block;
+        margin: 0;
+    }
+    .introduction{
+        background-color: #cd0101fc;
+        position: relative;
+        display: block;
+        width: 100%;
+        color: white;
+    }
+    .introductionImg{
+        display: none;
+    }
+    .navContainer{
+        width: 100%;
+        margin-top: 150px;
+    }
+    .navContainer ul{
+        width: 100%;
+        margin: 0;
+        padding: 33px 0;
+        z-index: 3;
+        position: relative;
+    }
+    .txtsIntro{
+        margin: 10px;
+    }
 }
