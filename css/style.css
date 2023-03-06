@@ -132,7 +132,6 @@ tr th{
 }
 .hide{
     display: none !important;
-    transition: display 2s;
 }
 .inputContainer{
     position: relative;
@@ -297,7 +296,6 @@ li{
 li:hover{
     font-size: 19px;
 }
-
 @media screen and (max-width: 1024px){
     .container{
         display: block;
