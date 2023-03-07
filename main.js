@@ -104,7 +104,7 @@ window.addEventListener("load", e=>{
         document.querySelector(".empty").classList.add("hide");
         document.querySelector(".inpSearch").classList.remove("hide")
     }
-    e.parentElement.classList.add("negro");
+    //e.parentElement.classList.add("negro");
 });
 document.querySelector(".containerTD").addEventListener("keydown", function(e){
     if(e.key == "Enter"){
@@ -231,4 +231,44 @@ function openIntro(e){
         $(".containerTD").fadeOut(500);
         $(".introduction").delay(500).fadeIn(500);
     });
+}
+let roundsForPlay;
+function addRounds(e){
+    roundsForPlay = e.value;
+}
+function vsFriend(e){
+    $(".custom").fadeOut(500, function (){
+        $(".game").delay(500).fadeIn(500);
+    });
+}
+function vsComputer(e){
+    $(".custom").fadeOut(500, function (){
+        $(".game").delay(500).fadeIn(500);
+    });
+}
+let selectionOfPlayer;
+let selectionOfPc;
+function gameFunctions(e){
+    selectionOfPlayer = e.dataset.elem;
+    console.log(selectionOfPlayer);
+    let randomNumber = Math.floor(Math.random()*3)+1;
+    if(randomNumber == 1){
+        selectionOfPc = "rock";
+    }
+    else if(randomNumber == 2){
+        selectionOfPc = "scissors";
+    }
+    else if(randomNumber == 3){
+        selectionOfPc = "paper";
+    }
+    console.log(selectionOfPc)
+    if(selectionOfPc == "rock" && selectionOfPlayer == "scissors" || selectionOfPc == "scissors" && selectionOfPlayer == "paper" || selectionOfPc == "paper" && selectionOfPlayer == "rock"){
+        document.querySelector(".spWinner").textContent = "PC";
+    }
+    else if(selectionOfPlayer == "rock" && selectionOfPc == "scissors" || selectionOfPlayer == "scissors" && selectionOfPc == "paper" || selectionOfPlayer == "paper" && selectionOfPc == "rock"){
+        document.querySelector(".spWinner").textContent = "Player 1";
+    }
+    else{
+        document.querySelector(".spWinner").textContent = "Tie";
+    }
 }
