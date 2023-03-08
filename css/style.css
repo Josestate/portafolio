@@ -304,17 +304,20 @@ li:hover{
     align-items: center;
 }
 .customBtn{
+    width: 140px;
     background: #450202ad;
     height: 40px;
     color: white;
     border: none;
     cursor: pointer;
 }
+.gameContainer{
+    display: none;
+}
 .game{
     background: #cd0101cc;
     display: none;
     padding: 30px;
-
 }
 .imgGame{
     width: 100px;
@@ -338,6 +341,13 @@ li:hover{
     color: white;
     background: #500404bf;
     width: 25%;
+}
+.pointsP{
+    display: flex;
+    margin: 10px;
+}
+.block{
+    pointer-events: none;
 }
 @media screen and (max-width: 1024px){
     .container{
