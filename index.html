@@ -12,7 +12,7 @@
     <div class="appContainer">
         <div class="container">
             <div class="childContainer">
-                <div class="introduction apps hide">
+                <div class="introduction apps">
                     <img src="img/pngtree-red-text-box-background-decoration-png-image_6572713.png" alt="" class="introductionImg">
                     <h1 class="txtsIntro">Welcome</h1>
                     <p class="txtsIntro">My name is Jose Pablo, I'm from San Jose Costa Rica, I'm student of front-end</p>
@@ -79,7 +79,7 @@
                         <p>We dont have any tasks for you</p>
                     </div>
                 </div>
-                <div class="gameContainer ">
+                <div class="gameContainer">
                     <div class="settingsOfGame">
                         <div class="custom">
                             <h1>Customize Game</h1>
@@ -89,28 +89,31 @@
                                 <option class="roundsOpt" value="5">5 Rounds</option>
                                 <option class="roundsOpt" value="10">10 Rounds</option>
                             </select>
-                            <button class="computerPlayer customBtn" onclick="vsComputer(this)">Play VS Computer</button>
+                            <button class="computerPlayer customBtn" onclick="vsComputer(this)">Play</button>
                         </div>
-                        <div class="game ">
+                        <div class="game">
                             <h2>¡Rock, Paper, Scissors!</h2>
-                            <h3>Round:</h3>
+                            <h3>Round:<span class="roundsCuant"></span></h3>
                             <div class="Player1 players">
                                 <h1>Player 1</h1>
+                                <p class="pointsP">Points: <span class="playerPoints"></span></p>
                                 <img class="imgGame" src="img/rockHand.png" alt="Rock" data-elem="rock" onclick="gameFunctions(this)">
                                 <img class="imgGame" src="img/paperHand.png" alt="Paper" data-elem="paper" onclick="gameFunctions(this)">
                                 <img class="imgGame" src="img/victory-hand-google.webp" alt="scissors" data-elem="scissors" onclick="gameFunctions(this)">
-                                <h2>Your Choice: <span class="pcChoice"></span></h2>
+                                <h2>Your Choice: <span class="playerChoice"></span></h2>
                             </div>
                             <div class="winner">
                                 <h2>winner: <span class="spWinner"></span></h2>
-                                <button class="resetGame">Reset</button>
+                                <button class="resetGame" onclick="backToCustom()">Back</button>
+                                <button class="resetGame" onclick="resetBtn()">Play Again</button>
                             </div>
                             <div class="computer players">
                                 <h1>Computer</h1>
+                                <p class="pointsP">Points: <span class="pcPoints"></span></p>
                                 <img class="imgGame" src="img/rockHand.png" alt="Rock" data-elem="rock">
                                 <img class="imgGame" src="img/paperHand.png" alt="Paper" data-elem="paper">
                                 <img class="imgGame" src="img/victory-hand-google.webp" alt="scissors" data-elem="scissors">
-                                <h2>Computer Choice: <span class="pcChoice"></span></h2>
+                                <h2>PC Choice: <span class="pcChoice"></span></h2>
                             </div>
                         </div>
                     </div>
@@ -121,12 +124,14 @@
                     <li onclick="openIntro(this)">Introduction</li>
                     <li onclick="openCalc(this)">Calculator</li>
                     <li onclick="openTD(this)">ToDo List</li>
+                    <li onclick="openGame(this)">Game</li>
                 </ul>
             </nav>
         </div>
     </div>
     <script src="main.js"></script>
     <div class="negro"></div>
+    <div class="block"></div>
 
 </body>
 </html>

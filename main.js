@@ -104,7 +104,7 @@ window.addEventListener("load", e=>{
         document.querySelector(".empty").classList.add("hide");
         document.querySelector(".inpSearch").classList.remove("hide")
     }
-    //e.parentElement.classList.add("negro");
+    e.parentElement.classList.add("negro");
 });
 document.querySelector(".containerTD").addEventListener("keydown", function(e){
     if(e.key == "Enter"){
@@ -217,18 +217,21 @@ function adderOfTasks(element){
 function openCalc(e){
     $(".introduction").fadeOut(500, function (){
         $(".containerTD").fadeOut(500);
+        $(".gameContainer").fadeOut(500);
         $(".calculator").delay(500).fadeIn(500);
     });
 }
 function openTD(e){
     $(".introduction").fadeOut(500, function (){
         $(".calculator").fadeOut(500);
+        $(".gameContainer").fadeOut(500);
         $(".containerTD").delay(500).fadeIn(500);
     });
 }
 function openIntro(e){
     $(".calculator").fadeOut(500, function (){
         $(".containerTD").fadeOut(500);
+        $(".gameContainer").fadeOut(500);
         $(".introduction").delay(500).fadeIn(500);
     });
 }
@@ -236,11 +239,11 @@ let roundsForPlay;
 function addRounds(e){
     roundsForPlay = e.value;
 }
-function vsFriend(e){
-    $(".custom").fadeOut(500, function (){
-        $(".game").delay(500).fadeIn(500);
-    });
-}
+// function vsFriend(e){
+//     $(".custom").fadeOut(500, function (){
+//         $(".game").delay(500).fadeIn(500);
+//     });
+// }
 function vsComputer(e){
     $(".custom").fadeOut(500, function (){
         $(".game").delay(500).fadeIn(500);
@@ -248,7 +251,13 @@ function vsComputer(e){
 }
 let selectionOfPlayer;
 let selectionOfPc;
+let pointsPc = 0;
+let pointsPlayer = 0;
+let rounds = 0;
+
 function gameFunctions(e){
+    rounds+=1;
+    document.querySelector(".roundsCuant").textContent = rounds;
     selectionOfPlayer = e.dataset.elem;
     console.log(selectionOfPlayer);
     let randomNumber = Math.floor(Math.random()*3)+1;
@@ -264,11 +273,50 @@ function gameFunctions(e){
     console.log(selectionOfPc)
     if(selectionOfPc == "rock" && selectionOfPlayer == "scissors" || selectionOfPc == "scissors" && selectionOfPlayer == "paper" || selectionOfPc == "paper" && selectionOfPlayer == "rock"){
         document.querySelector(".spWinner").textContent = "PC";
+        document.querySelector(".pcPoints").textContent = pointsPc +=1; 
     }
     else if(selectionOfPlayer == "rock" && selectionOfPc == "scissors" || selectionOfPlayer == "scissors" && selectionOfPc == "paper" || selectionOfPlayer == "paper" && selectionOfPc == "rock"){
         document.querySelector(".spWinner").textContent = "Player 1";
+        document.querySelector(".playerPoints").textContent = pointsPlayer +=1;
     }
     else{
         document.querySelector(".spWinner").textContent = "Tie";
     }
+    if(document.querySelector(".spWinner").textContent == "Tie" || document.querySelector(".spWinner").textContent == "Player 1" || document.querySelector(".spWinner").textContent == "PC"){
+        document.querySelector(".pcChoice").textContent = selectionOfPc;
+        document.querySelector(".playerChoice").textContent = selectionOfPlayer;
+    }
+    if(rounds == document.querySelector(".roundsOptions").value){
+        document.querySelectorAll(".imgGame").forEach(function (e){
+            e.classList.add("block");
+        });
+    }
+}
+function resetBtn(e){
+    pointsPc = 0;
+    pointsPlayer = 0;
+    document.querySelector(".roundsCuant").textContent = "";
+    document.querySelector(".spWinner").textContent = "";
+    document.querySelector(".pcPoints").textContent = pointsPc;
+    document.querySelector(".playerPoints").textContent = pointsPlayer;
+    document.querySelector(".playerChoice").textContent = "";
+    document.querySelector(".pcChoice").textContent = "";
+    rounds=0;
+    document.querySelectorAll(".imgGame").forEach(function (e){
+        e.classList.remove("block");
+    });
+}
+function backToCustom(){
+    $(".game").fadeOut(500, function (){
+        $(".custom").delay(500).fadeIn(500);
+    });
+    resetBtn();
+}
+function openGame(e){
+    backToCustom()
+    $(".introduction").fadeOut(500, function (){
+        $(".containerTD").fadeOut(500);
+        $(".calculator").fadeOut(500);
+        $(".gameContainer").delay(500).fadeIn(500);
+    });
 }
