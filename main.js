@@ -104,7 +104,7 @@ window.addEventListener("load", e=>{
         document.querySelector(".empty").classList.add("hide");
         document.querySelector(".inpSearch").classList.remove("hide")
     }
-    e.parentElement.classList.add("negro");
+    //e.parentElement.classList.add("negro");
 });
 document.querySelector(".containerTD").addEventListener("keydown", function(e){
     if(e.key == "Enter"){
@@ -239,11 +239,6 @@ let roundsForPlay;
 function addRounds(e){
     roundsForPlay = e.value;
 }
-// function vsFriend(e){
-//     $(".custom").fadeOut(500, function (){
-//         $(".game").delay(500).fadeIn(500);
-//     });
-// }
 function vsComputer(e){
     $(".custom").fadeOut(500, function (){
         $(".game").delay(500).fadeIn(500);
