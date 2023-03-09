@@ -104,7 +104,7 @@ window.addEventListener("load", e=>{
         document.querySelector(".empty").classList.add("hide");
         document.querySelector(".inpSearch").classList.remove("hide")
     }
-    e.parentElement.classList.add("negro");
+    //e.parentElement.classList.add("negro");
 });
 document.querySelector(".containerTD").addEventListener("keydown", function(e){
     if(e.key == "Enter"){
