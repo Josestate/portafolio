@@ -84,7 +84,7 @@
                         <div class="custom">
                             <h1>Customize Game</h1>
                             <select class="roundsOptions customBtn" onchange="addRounds(this)">
-                                <option class="roundsOpt" value="1">1 Round</option>
+                                <option class="roundsOpt roundsDefault" value="1">1 Round</option>
                                 <option class="roundsOpt" value="3">3 Rounds</option>
                                 <option class="roundsOpt" value="5">5 Rounds</option>
                                 <option class="roundsOpt" value="10">10 Rounds</option>
@@ -94,6 +94,7 @@
                         <div class="game">
                             <h2>¡Rock, Paper, Scissors!</h2>
                             <h3>Round:<span class="roundsCuant"></span></h3>
+                            <h2 class="winners hide">Game Winner: <span class="gameWinner"></span></h2>
                             <div class="Player1 players">
                                 <h1>Player 1</h1>
                                 <p class="pointsP">Points: <span class="playerPoints"></span></p>
@@ -103,16 +104,16 @@
                                 <h2>Your Choice: <span class="playerChoice"></span></h2>
                             </div>
                             <div class="winner">
-                                <h2>winner: <span class="spWinner"></span></h2>
+                                <h2 class="winners">Round Winner: <span class="spWinner"></span></h2>
                                 <button class="resetGame" onclick="backToCustom()">Back</button>
                                 <button class="resetGame" onclick="resetBtn()">Play Again</button>
                             </div>
                             <div class="computer players">
                                 <h1>Computer</h1>
                                 <p class="pointsP">Points: <span class="pcPoints"></span></p>
-                                <img class="imgGame" src="img/rockHand.png" alt="Rock" data-elem="rock">
-                                <img class="imgGame" src="img/paperHand.png" alt="Paper" data-elem="paper">
-                                <img class="imgGame" src="img/victory-hand-google.webp" alt="scissors" data-elem="scissors">
+                                <img class="imgGame imgRock hide" src="img/rockHand.png" alt="Rock" data-elem="rock">
+                                <img class="imgGame imgPaper hide" src="img/paperHand.png" alt="Paper" data-elem="paper">
+                                <img class="imgGame imgScissors hide" src="img/victory-hand-google.webp" alt="scissors" data-elem="scissors">
                                 <h2>PC Choice: <span class="pcChoice"></span></h2>
                             </div>
                         </div>
@@ -124,7 +125,7 @@
                     <li onclick="openIntro(this)">Introduction</li>
                     <li onclick="openCalc(this)">Calculator</li>
                     <li onclick="openTD(this)">ToDo List</li>
-                    <li onclick="openGame(this)">Game</li>
+                    <li onclick="openGame(this)">RPSGame</li>
                 </ul>
             </nav>
         </div>

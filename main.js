@@ -239,11 +239,6 @@ let roundsForPlay;
 function addRounds(e){
     roundsForPlay = e.value;
 }
-// function vsFriend(e){
-//     $(".custom").fadeOut(500, function (){
-//         $(".game").delay(500).fadeIn(500);
-//     });
-// }
 function vsComputer(e){
     $(".custom").fadeOut(500, function (){
         $(".game").delay(500).fadeIn(500);
@@ -290,17 +285,47 @@ function gameFunctions(e){
         document.querySelectorAll(".imgGame").forEach(function (e){
             e.classList.add("block");
         });
+        document.querySelector(".winners").classList.remove("hide")
+    }
+    if(pointsPc > pointsPlayer){
+        document.querySelector(".gameWinner").textContent = "PC";
+    }
+    else if(pointsPc < pointsPlayer){
+        document.querySelector(".gameWinner").textContent = "Player 1";
+    }
+    else{
+        document.querySelector(".gameWinner").textContent = "Tie";
+    }
+    if(selectionOfPc == "rock"){
+        document.querySelector(".imgRock").classList.remove("hide");
+        document.querySelector(".imgPaper").classList.add("hide");
+        document.querySelector(".imgScissors").classList.add("hide");
+    }
+    else if(selectionOfPc == "paper"){
+        document.querySelector(".imgPaper").classList.remove("hide");
+        document.querySelector(".imgScissors").classList.add("hide");
+        document.querySelector(".imgRock").classList.add("hide");
+    }
+    else if(selectionOfPc == "scissors"){
+        document.querySelector(".imgScissors").classList.remove("hide");
+        document.querySelector(".imgPaper").classList.add("hide");
+        document.querySelector(".imgRock").classList.add("hide");
     }
 }
 function resetBtn(e){
     pointsPc = 0;
     pointsPlayer = 0;
+    document.querySelector(".winners").classList.add("hide")
+    document.querySelector(".imgScissors").classList.add("hide");
+    document.querySelector(".imgPaper").classList.add("hide");
+    document.querySelector(".imgRock").classList.add("hide");
     document.querySelector(".roundsCuant").textContent = "";
     document.querySelector(".spWinner").textContent = "";
     document.querySelector(".pcPoints").textContent = pointsPc;
     document.querySelector(".playerPoints").textContent = pointsPlayer;
     document.querySelector(".playerChoice").textContent = "";
     document.querySelector(".pcChoice").textContent = "";
+    document.querySelector(".gameWinner").textContent = "";
     rounds=0;
     document.querySelectorAll(".imgGame").forEach(function (e){
         e.classList.remove("block");
@@ -310,6 +335,7 @@ function backToCustom(){
     $(".game").fadeOut(500, function (){
         $(".custom").delay(500).fadeIn(500);
     });
+    document.querySelector(".roundsOptions").value = 1;
     resetBtn();
 }
 function openGame(e){
