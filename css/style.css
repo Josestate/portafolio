@@ -327,6 +327,7 @@ li:hover{
     width: 100%;
     background: #500404bf;
     display: inline-flex;
+    justify-content: space-around;
     font-size: 11px;
     margin: 10px;
 }
@@ -348,6 +349,9 @@ li:hover{
 }
 .block{
     pointer-events: none;
+}
+.winners{
+    font-size: 20px;
 }
 @media screen and (max-width: 1024px){
     .container{
