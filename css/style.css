@@ -353,6 +353,19 @@ li:hover{
 .winners{
     font-size: 20px;
 }
+.mundialBtn{
+    cursor: pointer;
+    padding: 10px;
+    background: #0e0c0c8c;
+    color: white;   
+    text-decoration: none;
+}
+.mundialApi{
+    background: #cd0101cc;
+    padding: 38px;
+    box-shadow: 10px 10px 10px 9px black;
+    display: none;
+}
 @media screen and (max-width: 1024px){
     .container{
         display: block;
