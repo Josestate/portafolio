@@ -219,8 +219,7 @@ function openCalc(e){
         $(".containerTD").fadeOut(500);
         $(".gameContainer").fadeOut(500);
         $(".calculator").delay(500).fadeIn(500);
-        $(".navContainer").fadeOut(500);
-        $(".navContainer").fadeIn(500);
+        navChange()
         $(".mundialApi").fadeOut(500);
     });
 }
@@ -229,8 +228,7 @@ function openTD(e){
         $(".calculator").fadeOut(500);
         $(".gameContainer").fadeOut(500);
         $(".containerTD").delay(500).fadeIn(500);
-        $(".navContainer").fadeOut(500);
-        $(".navContainer").fadeIn(500);
+        navChange()
         $(".mundialApi").fadeOut(500);
     });
 }
@@ -251,6 +249,7 @@ function addRounds(e){
 function vsComputer(e){
     $(".custom").fadeOut(500, function (){
         $(".game").delay(500).fadeIn(500);
+        navChange()
     });
 }
 let selectionOfPlayer;
@@ -346,27 +345,27 @@ function backToCustom(){
     });
     document.querySelector(".roundsOptions").value = 1;
     resetBtn();
+    navChange();
 }
 function openGame(e){
-    backToCustom()
+    backToCustom();
     $(".introduction").fadeOut(500, function (){
         $(".containerTD").fadeOut(500);
         $(".calculator").fadeOut(500);
         $(".gameContainer").delay(500).fadeIn(500);
-        $(".navContainer").fadeOut(500);
-        $(".navContainer").fadeIn(500);
         $(".mundialApi").fadeOut(500);
     });
 }
 function openmundialApi(e){
-    backToCustom()
+    backToCustom();
     $(".introduction").fadeOut(500, function (){
         $(".containerTD").fadeOut(500);
         $(".calculator").fadeOut(500);
         $(".gameContainer").fadeOut(500);
-        $(".navContainer").fadeOut(500);
-        $(".navContainer").fadeIn(500);
         $(".mundialApi").delay(500).fadeIn(500);
     });
 }
-
+function navChange(){
+    $(".navContainer").fadeOut(500);
+    $(".navContainer").fadeIn(500);
+}
