@@ -8,10 +8,13 @@
     width: 100%;
 }
 .containerTD{
+    background-image: linear-gradient(red, #0f0f0ee8);
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+    box-shadow: 10px 10px 20px 10px black;
     display: none;
     width: 350px;
     text-align: center;
-    background: #cd0101cc;
     padding: 20px;
 }
 .inpCont{
@@ -112,8 +115,10 @@ hr{
     padding-inline-start: 0;
 }
 .calculator{
-    background: #cd0101cc;
-    position: relative;
+    background-image: linear-gradient(red, #0f0f0ee8);
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+    box-shadow: 10px 10px 20px 10px black;
     display: none;
     width: 350px;
     text-align: center;  
@@ -246,19 +251,13 @@ tr th{
     margin: 0;
 }
 .introduction{
-    font-size: 13px;
-    position: relative;
-    display: inline-block;
     margin-right: 50px;
     width: 45%;
-    color: white;
-}
-.introductionImg{
-    position: absolute;
-    top: -204px;
-    left: -85px;
-    width: 156%;
-    z-index: 1;
+    background-image: linear-gradient(red, #0f0f0ee8);
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+    box-shadow: 10px 10px 20px 10px black;
+    padding: 20px;
 }
 .childContainer{
     margin: 10% 0;
@@ -281,12 +280,12 @@ body{
     margin: 0;
     color: rgb(255, 254, 254);
 }
-/* html{
-    height: 100%;
-} */
 .navContainer ul{
+    background-image: linear-gradient(red, #0f0f0ee8);
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+    box-shadow: 10px 10px 20px 10px black;
     width: 110px;
-    background: #cd0101cc;
     padding: 33px;
     box-shadow: 10px 10px 10px 9px black;
 }
@@ -298,8 +297,11 @@ li:hover{
     font-size: 19px;
 }
 .custom{
+    background-image: linear-gradient(red, #0f0f0ee8);
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+    box-shadow: 10px 10px 20px 10px black;
     width: 100%;
-    background: #cd0101cc;
     padding: 30px;
     display: flex;
     justify-content: space-evenly;
@@ -317,7 +319,10 @@ li:hover{
     display: none;
 }
 .game{
-    background: #cd0101cc;
+    background-image: linear-gradient(red, #0f0f0ee8);
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+    box-shadow: 10px 10px 20px 10px black;
     display: none;
     padding: 30px;
 }
@@ -342,7 +347,7 @@ li:hover{
 .resetGame{
     cursor: pointer;
     color: white;
-    background: #500404bf;
+    background: #500404db;
     width: 25%;
 }
 .pointsP{
@@ -363,7 +368,19 @@ li:hover{
     text-decoration: none;
 }
 .mundialApi{
-    background: #cd0101cc;
+    background-image: linear-gradient(red, #0f0f0ee8);
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+    box-shadow: 10px 10px 20px 10px black;
+    padding: 38px;
+    box-shadow: 10px 10px 10px 9px black;
+    display: none;
+}
+.rolexPr{
+    background-image: linear-gradient(red, #0f0f0ee8);
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+    box-shadow: 10px 10px 20px 10px black;
     padding: 38px;
     box-shadow: 10px 10px 10px 9px black;
     display: none;
@@ -424,29 +441,5 @@ li:hover{
         padding: 33px 0;
         z-index: 3;
         position: relative;
-    }
-}
-/* @media screen and ( min-width: 740px){
-    
-    .introductionImg{
-        top: -179px;
-        width: 225%;
-    }
-} */
-@media screen and ( min-width: 740px) and (max-width: 840px){
-    .introduction{
-        font-size: 40px;
-    }
-    .introductionImg{
-        top: -216px;
-        width: 202%;
-    }
-    body{
-        font-size: 14px;
-    }
-}
-@media screen and ( max-width: 1300px) and (min-width: 1030px){ 
-    .introductionImg{
-        top: -273px;
     }
 }

@@ -218,28 +218,31 @@ function openCalc(e){
     $(".introduction").fadeOut(500, function (){
         $(".containerTD").fadeOut(500);
         $(".gameContainer").fadeOut(500);
-        $(".calculator").delay(500).fadeIn(500);
         navChange()
         $(".mundialApi").fadeOut(500);
+        $(".rolexPr").fadeOut(500);
+        $(".calculator").delay(500).fadeIn(500);
     });
 }
 function openTD(e){
     $(".introduction").fadeOut(500, function (){
         $(".calculator").fadeOut(500);
         $(".gameContainer").fadeOut(500);
-        $(".containerTD").delay(500).fadeIn(500);
         navChange()
         $(".mundialApi").fadeOut(500);
+        $(".rolexPr").fadeOut(500);
+        $(".containerTD").delay(500).fadeIn(500);
     });
 }
 function openIntro(e){
     $(".calculator").fadeOut(500, function (){
         $(".containerTD").fadeOut(500);
         $(".gameContainer").fadeOut(500);
-        $(".introduction").delay(500).fadeIn(500);
         $(".navContainer").fadeOut(400);
-        $(".navContainer").fadeIn(100);
+        $(".rolexPr").fadeOut(500);
         $(".mundialApi").fadeOut(500);
+        $(".navContainer").fadeIn(100);
+        $(".introduction").delay(500).fadeIn(500);
     });
 }
 let roundsForPlay;
@@ -352,8 +355,9 @@ function openGame(e){
     $(".introduction").fadeOut(500, function (){
         $(".containerTD").fadeOut(500);
         $(".calculator").fadeOut(500);
-        $(".gameContainer").delay(500).fadeIn(500);
+        $(".rolexPr").fadeOut(500);
         $(".mundialApi").fadeOut(500);
+        $(".gameContainer").delay(500).fadeIn(500);
     });
 }
 function openmundialApi(e){
@@ -362,7 +366,18 @@ function openmundialApi(e){
         $(".containerTD").fadeOut(500);
         $(".calculator").fadeOut(500);
         $(".gameContainer").fadeOut(500);
+        $(".rolexPr").fadeOut(500);
         $(".mundialApi").delay(500).fadeIn(500);
+    });
+}
+function openRolexPr(e){
+    backToCustom();
+    $(".introduction").fadeOut(500, function (){
+        $(".containerTD").fadeOut(500);
+        $(".calculator").fadeOut(500);
+        $(".gameContainer").fadeOut(500);
+        $(".mundialApi").fadeOut(500);
+        $(".rolexPr").delay(500).fadeIn(500);
     });
 }
 function navChange(){
