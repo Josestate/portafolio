@@ -385,6 +385,15 @@ li:hover{
     box-shadow: 10px 10px 10px 9px black;
     display: none;
 }
+.loaderContainer{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    display: none;
+}
+.loadingGif{
+    width: 100px;
+}
 @media screen and (max-width: 1000px){
     .players{
         display: grid;
