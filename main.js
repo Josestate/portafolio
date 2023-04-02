@@ -104,7 +104,6 @@ window.addEventListener("load", e=>{
         document.querySelector(".empty").classList.add("hide");
         document.querySelector(".inpSearch").classList.remove("hide")
     }
-    //e.parentElement.classList.add("negro");
 });
 document.querySelector(".containerTD").addEventListener("keydown", function(e){
     if(e.key == "Enter"){
@@ -215,45 +214,49 @@ function adderOfTasks(element){
     })()}`);
 }
 function openCalc(e){
-    $(".introduction").fadeOut(500, function (){
+    $(".introduction").fadeOut(500)
         $(".containerTD").fadeOut(500);
         $(".gameContainer").fadeOut(500);
         navChange()
         $(".mundialApi").fadeOut(500);
         $(".rolexPr").fadeOut(500);
         $(".calculator").delay(500).fadeIn(500);
-    });
 }
 function openTD(e){
-    $(".introduction").fadeOut(500, function (){
+    $(".introduction").fadeOut(500)
         $(".calculator").fadeOut(500);
         $(".gameContainer").fadeOut(500);
         navChange()
         $(".mundialApi").fadeOut(500);
         $(".rolexPr").fadeOut(500);
         $(".containerTD").delay(500).fadeIn(500);
-    });
 }
 function openIntro(e){
-    $(".calculator").fadeOut(500, function (){
-        $(".containerTD").fadeOut(500);
+    $(".containerTD").fadeOut(500)
+        $(".calculator").fadeOut(500);
         $(".gameContainer").fadeOut(500);
-        $(".navContainer").fadeOut(400);
-        $(".rolexPr").fadeOut(500);
+        navChange()
         $(".mundialApi").fadeOut(500);
-        $(".navContainer").fadeIn(100);
+        $(".rolexPr").fadeOut(500);
         $(".introduction").delay(500).fadeIn(500);
-    });
+    // $(".calculator").fadeOut(500, function (){
+    //     $(".containerTD").fadeOut(500);
+    //     $(".gameContainer").fadeOut(500);
+    //     $(".navContainer").fadeOut(400);
+    //     $(".rolexPr").fadeOut(500);
+    //     $(".mundialApi").fadeOut(500);
+    //     $(".navContainer").fadeIn(100);
+    //     $(".introduction").delay(500).fadeIn(500);
+    // });
 }
 let roundsForPlay;
 function addRounds(e){
     roundsForPlay = e.value;
 }
 function vsComputer(e){
-    $(".custom").fadeOut(500, function (){
+    $(".custom").fadeOut(500)
         $(".game").delay(500).fadeIn(500);
-        navChange()
-    });
+        navChange();
 }
 let selectionOfPlayer;
 let selectionOfPc;
@@ -343,9 +346,8 @@ function resetBtn(e){
     });
 }
 function backToCustom(){
-    $(".game").fadeOut(500, function (){
-        $(".custom").delay(500).fadeIn(500);
-    });
+    $(".game").fadeOut(500)
+    $(".custom").delay(500).fadeIn(500);
     document.querySelector(".roundsOptions").value = 1;
     resetBtn();
     navChange();
