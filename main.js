@@ -46,6 +46,13 @@ document.querySelector(".typerInp").addEventListener("keyup", function(){
         this.value = "";
     }
 });
+function valorCalc(e){
+    document.querySelector(".fatherResults").classList.remove("hide");
+    document.querySelector(".oldResults").insertAdjacentHTML("afterbegin", `<tr onclick="valorInp(this)"><td class="op">${document.querySelector(".typerInp").value}</td><td class="resu">${document.querySelector(".result").textContent}</td></tr>`);
+    document.querySelector(".typerInp").value = "";
+    document.querySelector(".result").textContent = "";
+    document.querySelector(".clear").classList.remove("hide");
+}
 document.querySelector(".calculator").addEventListener("keydown", function(e){
     if(e.key == "Enter"){
         e.preventDefault();
@@ -239,15 +246,6 @@ function openIntro(e){
         $(".mundialApi").fadeOut(500);
         $(".rolexPr").fadeOut(500);
         $(".introduction").delay(500).fadeIn(500);
-    // $(".calculator").fadeOut(500, function (){
-    //     $(".containerTD").fadeOut(500);
-    //     $(".gameContainer").fadeOut(500);
-    //     $(".navContainer").fadeOut(400);
-    //     $(".rolexPr").fadeOut(500);
-    //     $(".mundialApi").fadeOut(500);
-    //     $(".navContainer").fadeIn(100);
-    //     $(".introduction").delay(500).fadeIn(500);
-    // });
 }
 let roundsForPlay;
 function addRounds(e){

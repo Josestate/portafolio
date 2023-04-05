@@ -132,6 +132,18 @@ hr{
     cursor: pointer;
     color: white;
 }
+.btnResultado{
+    border: none;
+    color: #fff;
+    background: #000;
+    cursor: pointer;
+    width: 10%;
+    box-sizing: border-box;
+}
+.btnResultado:hover{
+    background-color: #fff;
+    color: #000;
+}
 tr th{
     width: 50%;
 }
@@ -139,14 +151,14 @@ tr th{
     display: none !important;
 }
 .inputContainer{
+    display: flex;
     position: relative;
     margin-bottom: 5px;
 }
 .warningImg{
     position: absolute;
     width: 30px;
-    top: 0;
-    right: 0;
+    top: 4px;
 }
 .btnContainer{
     display: grid;
@@ -159,13 +171,14 @@ tr th{
     height: 33px;
 }
 .typerInp{
-    width: 100%;
+    width: 90%;
     height: 33px;
 }
 .result{
+    color: black;
     position: absolute;
     top: 0;
-    right: 0;
+    right: 15%;
     line-height: 10px;
 }
 .oldResults{
