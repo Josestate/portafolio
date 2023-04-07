@@ -300,7 +300,6 @@ body{
     box-shadow: 10px 10px 20px 10px black;
     width: 110px;
     padding: 33px;
-    box-shadow: 10px 10px 10px 9px black;
 }
 li{
     margin: 15px;
@@ -445,7 +444,6 @@ li:hover{
     .introduction{
         padding: 40px;
         background-color: #cd0101c4;
-        box-shadow: 10px 10px 9px 7px black;
     }
     .introductionImg{
         display: none;
