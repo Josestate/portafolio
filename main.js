@@ -4,6 +4,18 @@ gsap.from('.navContainer',{
     x:500,
     ease: 'back'
 });
+gsap.from('.navContainer li',{
+    opacity: -1,
+    duration:4,
+    x:300,
+    ease: 'back'
+});
+gsap.from('.txtsIntro',{
+    opacity: -1,
+    duration:4,
+    y:-300,
+    ease: 'back'
+});
 gsap.from('.childContainer',{
     opacity: -1,
     duration:3,
