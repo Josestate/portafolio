@@ -9,7 +9,7 @@ gsap.from('.childContainer',{
     duration:3,
     y:-500,
     ease: 'back'
-});
+}); 
 function numeros(e){
     document.querySelector(".typerInp").value += e.value;
     console.log(document.querySelector(".typerInp").value);
