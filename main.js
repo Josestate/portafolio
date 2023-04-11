@@ -1,3 +1,27 @@
+gsap.from('.navContainer',{
+    opacity: -1,
+    duration:3,
+    x:500,
+    ease: 'back'
+});
+gsap.from('.navContainer li',{
+    opacity: -1,
+    duration:4,
+    x:300,
+    ease: 'back'
+});
+gsap.from('.txtsIntro',{
+    opacity: -1,
+    duration:4,
+    y:-300,
+    ease: 'back'
+});
+gsap.from('.childContainer',{
+    opacity: -1,
+    duration:3,
+    y:-500,
+    ease: 'back'
+}); 
 function numeros(e){
     document.querySelector(".typerInp").value += e.value;
     console.log(document.querySelector(".typerInp").value);
